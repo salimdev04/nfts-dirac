@@ -16,3 +16,6 @@ export const data_images = [
     image: "/data/3.png",
   },
 ];
+
+export const shortenAdress = (addr: string | undefined) =>
+  addr != null ? `${addr.slice(0, 13)}...${addr.slice(addr.length - 13)}` : "";
