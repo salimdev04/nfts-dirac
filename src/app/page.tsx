@@ -47,13 +47,17 @@ export default function Home() {
       >
         Connect Your Waller
       </button>
-      <button className=" border m-2" onClick={addTokenUri}>
-        add Token uri
-      </button>
+      {address == `0x${0x3d6560ad6ce98f562e8057dcd42bd96aa2e63cb3}` && (
+        <div>
+          <button className=" border m-2" onClick={addTokenUri}>
+            add Token uri
+          </button>
 
-      <button className=" border m-2" onClick={checkTokenID}>
-        check Token id
-      </button>
+          <button className=" border m-2" onClick={checkTokenID}>
+            check Token id
+          </button>
+        </div>
+      )}
       {address && (
         <div className="mt-[2rem] text-right text-red-400">
           <p>Polygon zkEVM Testnet</p>
@@ -79,6 +83,11 @@ export default function Home() {
             </button>
           </div>
         ))}
+      </div>
+      <div className="my-[2rem] underline">
+        <h1 className=" text-2xl">
+          Lists of Your NFTs in Polygon zkEVM Testnet
+        </h1>
       </div>
     </main>
   );

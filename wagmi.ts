@@ -8,8 +8,8 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     jsonRpcProvider({
       rpc: (chain) => ({
-        // http: `https://rpc.public.zkevm-test.net`,
-        http: `https://goerli-rollup.arbitrum.io/rpc`,
+        http: `https://rpc.public.zkevm-test.net`,
+        // http: `https://goerli-rollup.arbitrum.io/rpc`,
       }),
     }),
   ]
