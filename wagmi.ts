@@ -4,11 +4,12 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { jsonRpcProvider } from "@wagmi/core/providers/jsonRpc";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [polygonZkEvmTestnet],
+  [arbitrumGoerli],
   [
     jsonRpcProvider({
       rpc: (chain) => ({
-        http: `https://rpc.public.zkevm-test.net`,
+        // http: `https://rpc.public.zkevm-test.net`,
+        http: `https://goerli-rollup.arbitrum.io/rpc`,
       }),
     }),
   ]
