@@ -37,7 +37,6 @@ export default function Home() {
 
   const mintToken = async (_uri: string) => {
     await safeMint({ args: [_uri] });
-    toast.success("successfully");
   };
 
   return (
